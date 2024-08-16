@@ -20,10 +20,6 @@ app.get('/', async (req, res) => {
 
 app.use('/api', apiRouter);
 
-app.all('/api/*/*', (req, res) => {
-	return res.status(404).json({ msg: 'Route not found' });
-});
-
 app.listen(5000, () => {
 	return console.log('Server is now online');
 });
