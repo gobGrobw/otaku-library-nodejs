@@ -1,5 +1,6 @@
 const express = require('express');
 const apiRouter = require('./router');
+const cors = require('cors');
 require('./dbConnect');
 
 const app = express();
@@ -7,6 +8,11 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(
+	cors({
+		origin: 'https://otaku-library.vercel.app/',
+	})
+);
 
 app.get('/', async (req, res) => {
 	return res.redirect('/api');
