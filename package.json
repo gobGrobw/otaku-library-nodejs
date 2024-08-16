@@ -1,0 +1,23 @@
+{
+	"name": "animeapi-nodejs",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon ./api/index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@supabase/supabase-js": "^2.45.1",
+		"bcryptjs": "^2.4.3",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"express-async-handler": "^1.2.0",
+		"express-validator": "^7.2.0",
+		"jsonwebtoken": "^9.0.2",
+		"nodemon": "^3.1.4"
+	}
+}
