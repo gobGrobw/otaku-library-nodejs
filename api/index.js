@@ -1,6 +1,7 @@
 const express = require('express');
 const apiRouter = require('./router');
 const cors = require('cors');
+const allowCors = require('./allowCors');
 require('./dbConnect');
 
 const app = express();
@@ -9,10 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({ origin: 'https://otaku-library.vercel.app/' }));
-app.use((req, res, next) => {
-	console.log('Request Origin:', req.headers.origin);
-	next();
-});
+app.use(allowCors);
 
 app.get('/', async (req, res) => {
 	return res.redirect('/api');
