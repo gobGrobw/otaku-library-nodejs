@@ -2,10 +2,9 @@ const allowCors = (fn) => async (req, res) => {
 	res.setHeader('Access-Control-Allow-Credentials', true);
 	res.setHeader(
 		'Access-Control-Allow-Origin',
-		'https://otaku-library.vercel.app/log-in'
+		'https://otaku-library.vercel.app/'
 	);
 	// another common pattern
-	// res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
 	res.setHeader(
 		'Access-Control-Allow-Methods',
 		'GET,OPTIONS,PATCH,DELETE,POST,PUT'
